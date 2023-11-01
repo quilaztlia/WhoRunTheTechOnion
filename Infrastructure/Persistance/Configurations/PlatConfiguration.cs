@@ -1,0 +1,10 @@
+﻿namespace Persistance;
+
+internal sealed class PlatConfiguration
+: IEntityTypeConfiguration<Plat>
+{
+    public void Configure(EntityTypeBuilder<Plat> builder){
+        builder.ToTable(nameof(Plat));
+        builder.HasKey(plat => plat.Id)
+    }
+}

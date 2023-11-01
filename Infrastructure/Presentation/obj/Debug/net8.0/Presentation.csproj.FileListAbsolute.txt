@@ -1,0 +1,11 @@
+D:\2023\1.CFP\WhoRunTheTech\Onion\Infrastructure\Presentation\bin\Debug\net8.0\Presentation.deps.json
+D:\2023\1.CFP\WhoRunTheTech\Onion\Infrastructure\Presentation\bin\Debug\net8.0\Presentation.dll
+D:\2023\1.CFP\WhoRunTheTech\Onion\Infrastructure\Presentation\bin\Debug\net8.0\Presentation.pdb
+D:\2023\1.CFP\WhoRunTheTech\Onion\Infrastructure\Presentation\obj\Debug\net8.0\Presentation.GeneratedMSBuildEditorConfig.editorconfig
+D:\2023\1.CFP\WhoRunTheTech\Onion\Infrastructure\Presentation\obj\Debug\net8.0\Presentation.AssemblyInfoInputs.cache
+D:\2023\1.CFP\WhoRunTheTech\Onion\Infrastructure\Presentation\obj\Debug\net8.0\Presentation.AssemblyInfo.cs
+D:\2023\1.CFP\WhoRunTheTech\Onion\Infrastructure\Presentation\obj\Debug\net8.0\Presentation.csproj.CoreCompileInputs.cache
+D:\2023\1.CFP\WhoRunTheTech\Onion\Infrastructure\Presentation\obj\Debug\net8.0\Presentation.dll
+D:\2023\1.CFP\WhoRunTheTech\Onion\Infrastructure\Presentation\obj\Debug\net8.0\refint\Presentation.dll
+D:\2023\1.CFP\WhoRunTheTech\Onion\Infrastructure\Presentation\obj\Debug\net8.0\Presentation.pdb
+D:\2023\1.CFP\WhoRunTheTech\Onion\Infrastructure\Presentation\obj\Debug\net8.0\ref\Presentation.dll

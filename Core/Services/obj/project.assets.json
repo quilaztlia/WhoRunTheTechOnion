@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Services.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Services.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.Abstractions.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Services.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../Services.Abstractions/Services.Abstractions.csproj",
+      "msbuildProject": "../Services.Abstractions/Services.Abstractions.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Services.Abstractions >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\tenna\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\2023\\1.CFP\\WhoRunTheTech\\Onion\\Core\\Services\\Services.csproj",
+      "projectName": "Services",
+      "projectPath": "D:\\2023\\1.CFP\\WhoRunTheTech\\Onion\\Core\\Services\\Services.csproj",
+      "packagesPath": "C:\\Users\\tenna\\.nuget\\packages\\",
+      "outputPath": "D:\\2023\\1.CFP\\WhoRunTheTech\\Onion\\Core\\Services\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\tenna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "D:\\2023\\1.CFP\\WhoRunTheTech\\Onion\\Core\\Services.Abstractions\\Services.Abstractions.csproj": {
+              "projectPath": "D:\\2023\\1.CFP\\WhoRunTheTech\\Onion\\Core\\Services.Abstractions\\Services.Abstractions.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.2.23502.2/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

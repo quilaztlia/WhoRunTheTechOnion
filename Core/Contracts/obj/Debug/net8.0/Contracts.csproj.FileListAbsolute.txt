@@ -1,0 +1,11 @@
+D:\2023\1.CFP\WhoRunTheTech\Onion\Core\Contracts\bin\Debug\net8.0\Contracts.deps.json
+D:\2023\1.CFP\WhoRunTheTech\Onion\Core\Contracts\bin\Debug\net8.0\Contracts.dll
+D:\2023\1.CFP\WhoRunTheTech\Onion\Core\Contracts\bin\Debug\net8.0\Contracts.pdb
+D:\2023\1.CFP\WhoRunTheTech\Onion\Core\Contracts\obj\Debug\net8.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\2023\1.CFP\WhoRunTheTech\Onion\Core\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfoInputs.cache
+D:\2023\1.CFP\WhoRunTheTech\Onion\Core\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfo.cs
+D:\2023\1.CFP\WhoRunTheTech\Onion\Core\Contracts\obj\Debug\net8.0\Contracts.csproj.CoreCompileInputs.cache
+D:\2023\1.CFP\WhoRunTheTech\Onion\Core\Contracts\obj\Debug\net8.0\Contracts.dll
+D:\2023\1.CFP\WhoRunTheTech\Onion\Core\Contracts\obj\Debug\net8.0\refint\Contracts.dll
+D:\2023\1.CFP\WhoRunTheTech\Onion\Core\Contracts\obj\Debug\net8.0\Contracts.pdb
+D:\2023\1.CFP\WhoRunTheTech\Onion\Core\Contracts\obj\Debug\net8.0\ref\Contracts.dll
