@@ -1,4 +1,4 @@
-﻿using Domain.Repository.Abstraction;
+﻿using Domain.Repository.Abstractions;
 using Services.Abstractions;
 
 namespace Services;
@@ -7,9 +7,8 @@ namespace Services;
 internal sealed class LoginService
 : ILoginService
 {
-    private readonly IClientRepository _clientRepository;
+    private readonly ILoginRepository _loginRepository;
 
-    public LoginService(IClientRepository clientRepository)
-    => _clientRepository = clientRepository;
-
+    public LoginService(ILoginRepository loginRepository)
+    => _loginRepository = loginRepository;
 }

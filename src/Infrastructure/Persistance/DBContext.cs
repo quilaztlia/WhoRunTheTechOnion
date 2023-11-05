@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Persistance;
 
-public sealed class RepositoryDbContext : DbContext
+public sealed class DBContext : DbContext
 {
-    public RepositoryDbContext(DbContextOptions options)
+    public DBContext(DbContextOptions options)
     : base(options)
     { }
         public DbSet<Client> Clients { get; set; }
@@ -15,6 +15,6 @@ public sealed class RepositoryDbContext : DbContext
         //public DbSet<Factur> Factures{get;set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder){
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(RepositoryDbContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(DBContext).Assembly);
         }    
 }

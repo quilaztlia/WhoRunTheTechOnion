@@ -1,17 +1,16 @@
 ﻿using Contracts;
-using Domain.Repository.Abstraction;
+using Domain.Repository.Abstractions;
 using Services.Abstractions;
 
 namespace Services;
 
-internal sealed class CommandeService 
-: ICommandeService
+internal sealed class CommandeService : ICommandeService
 {
-    private readonly ICommandeRepository _commandeRepository;
+    private readonly IRepositoryManager _repositoryManager;
     
-    public CommandeService(ICommandeRepository commandeRepository)
+    public CommandeService(IRepositoryManager repositoryManager)
     {
-        _commandeRepository = commandeRepository;
+        _repositoryManager = repositoryManager;
     }
 
     public Task<CommandeDto> CreateAsync(CommandeCreationDto commandeToCreate, CancellationToken cancellationToken=default)

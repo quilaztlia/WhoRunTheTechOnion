@@ -1,8 +1,14 @@
+using Services.Abstractions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 //// Add services to the container.
-//builder.Services.AddControllers()
-//    .AddApplicationPart(Persistance)
+builder.Services.AddControllers()
+    .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
+
+//WHY ?
+//builder.Services.AddScoped<ICommandeService, CommandeService>();
+
 
 builder.Services.AddRazorPages();
 

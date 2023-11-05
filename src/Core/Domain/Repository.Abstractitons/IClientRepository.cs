@@ -1,6 +1,6 @@
 using Domain.Entities;
 
-namespace Domain.Repository.Abstraction;
+namespace Domain.Repository.Abstractions;
 public interface IClientRepository{
     Task<IEnumerable<Client>> GetAllAsync(CancellationToken cancellationToken=default);
     Task<Client> GetByIdAsync(CancellationToken cancellationToken= default);
