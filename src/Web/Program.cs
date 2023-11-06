@@ -1,34 +1,57 @@
+using Services;
 using Services.Abstractions;
+using Persistance;
+using Domain.Repository.Abstractions;
+using Web.Middleware;
+using Microsoft.Extensions.Configuration;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//// Add services to the container.
+// Add services to the container.
+//builder.Services.AddRazorPages();
 builder.Services.AddControllers()
     .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
 
-//WHY ?
-//builder.Services.AddScoped<ICommandeService, CommandeService>();
+builder.Services.AddSwaggerGen(options => 
+    options.SwaggerDoc("v1", new OpenApiInfo{Title="WebApi"}));
 
+builder.Services.AddScoped<IServiceManager, ServiceManager>();
+builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 
-builder.Services.AddRazorPages();
+builder.Services.AddDbContextPool<DBContext>(builder => {
+    //var connectionString = Configuration.GetConnectionString("Database");
+    //builder.
+});
+
+builder.Services.AddTransient<ErrorHandling>();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+//http://localhost:5189/swagger/v1/swagger.json
+//http://localhost:5189/index.html
+if (app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
+    //app.UseExceptionHandler("/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    //app.UseHsts();
+
+    app.UseSwagger();
+    app.UseSwaggerUI(options => {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "");
+        options.RoutePrefix = string.Empty;
+        });
 }
 
+//app.UseMiddleware<ErrorHandling>();
+
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+//app.UseStaticFiles();
 
 app.UseRouting();
-
 app.UseAuthorization();
-
-app.MapRazorPages();
+app.UseEndpoints(endpoints => endpoints.MapControllers());
+//app.MapRazorPages();
 
 app.Run();
