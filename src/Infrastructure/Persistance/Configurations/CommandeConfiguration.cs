@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistance.Configuration;
 
+//internal why ??
 internal sealed class CommandeConfiguration
 : IEntityTypeConfiguration<Commande>
 {

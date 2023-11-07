@@ -4,7 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistance.Configuration;
 
-internal sealed class RestaurantConfiguration
+
+/*
+ * internal sealed class RestaurantConfiguration
 : IEntityTypeConfiguration<Restaurant>
 {
     // public void Configure(Entity){
@@ -14,3 +16,5 @@ internal sealed class RestaurantConfiguration
         throw new NotImplementedException();
     }
 }
+
+*/

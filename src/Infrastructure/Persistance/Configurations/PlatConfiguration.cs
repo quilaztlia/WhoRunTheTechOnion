@@ -4,7 +4,10 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistance.Configuration;
 
-internal sealed class PlatConfiguration
+/*
+ * 
+ * 
+ * internal sealed class PlatConfiguration
 : IEntityTypeConfiguration<Plat>
 {
     public void Configure(EntityTypeBuilder<Plat> builder){
@@ -14,3 +17,4 @@ internal sealed class PlatConfiguration
         builder.HasKey(plat => plat.Id);
     }
 }
+*/

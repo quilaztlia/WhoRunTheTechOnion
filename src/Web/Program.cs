@@ -3,8 +3,9 @@ using Services.Abstractions;
 using Persistance;
 using Domain.Repository.Abstractions;
 using Web.Middleware;
-using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,9 +20,15 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 
+
+IConfiguration configuration = builder.Configuration;
+Console.WriteLine(configuration);
+Debug.WriteLine(configuration);
+
+
 builder.Services.AddDbContextPool<DBContext>(builder => {
-    //var connectionString = Configuration.GetConnectionString("Database");
-    //builder.
+    var connectionString = configuration.GetConnectionString("Database");
+    builder.UseSqlServer(connectionString);
 });
 
 builder.Services.AddTransient<ErrorHandling>();

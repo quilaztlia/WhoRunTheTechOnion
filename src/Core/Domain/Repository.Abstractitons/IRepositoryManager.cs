@@ -2,5 +2,5 @@
 
 public class IRepositoryManager
 {
-    ICommandeRepository CommandeRepository { get; }    
+    ICommandeRepository CommandeRepository { get; }
 }

@@ -20,7 +20,8 @@ internal sealed class CommandeService : ICommandeService
 
     public Task<IEnumerable<CommandeDto>> GetAllAsync(CancellationToken cancellationToken=default)
     {
-        throw new NotImplementedException();
+        Console.WriteLine("GetAllAsync");
+        return default;
     }
 
     public Task<CommandeDto> GetByIdAsync(Guid commandeId, CancellationToken cancellationToken=default)

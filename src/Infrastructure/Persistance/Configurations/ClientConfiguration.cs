@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistance.Configuration;
 
-//internal why ??
+/*
+ * 
 internal sealed class ClientConfiguration
 : IEntityTypeConfiguration<Client>
 {
@@ -13,3 +14,5 @@ internal sealed class ClientConfiguration
         builder.HasKey(client => client.Id);
     }
 }
+
+*/
