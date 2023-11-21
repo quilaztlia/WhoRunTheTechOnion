@@ -24,6 +24,25 @@ public class ArchitectureTest
              System.Reflection.Assembly.Load("Web")
             )
         .Build();
+    //Nomage
+    [Fact]
+    public void NamingForServices()
+    {
+        IArchRule rule = Classes().That().ResideInAssembly("Services")
+            .Should().HaveNameEndingWith("Service");
+
+        rule.Check(_architecture);
+    }
+
+    [Fact]
+    public void NamingForPresentation()
+    {
+        IArchRule rule = Classes().That().ResideInAssembly("Presentation")
+            .Should().HaveNameEndingWith("Controller");
+
+        rule.Check(_architecture);
+    }
+
 
     //Dependances
     [Fact]
@@ -72,24 +91,6 @@ public class ArchitectureTest
         rule.Check(_architecture);
     }
 
-    //Nomage
-    [Fact]
-    public void NamingForServices()
-    {
-        IArchRule rule = Classes().That().ResideInAssembly("Services")
-            .Should().HaveNameEndingWith("Service");
-
-        rule.Check(_architecture);
-    }
-
-    [Fact]
-    public void NamingForPresentation()
-    {
-        IArchRule rule = Classes().That().ResideInAssembly("Presentation")
-            .Should().HaveNameEndingWith("Controller");
-
-        rule.Check(_architecture);
-    }
 
     //Appartenance
     [Fact]

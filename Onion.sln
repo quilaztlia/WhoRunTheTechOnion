@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation", "src\Infrast
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "src\Web\Web.csproj", "{458C3DDF-690F-43BF-A121-DBDF8E7EA57B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestArhUnitNet", "test\testArhUnitNet\TestArhUnitNet.csproj", "{54EE4F33-F6C8-405F-8384-6EC2BF72849A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestArchUnitNet", "test\testArhUnitNet\TestArchUnitNet.csproj", "{54EE4F33-F6C8-405F-8384-6EC2BF72849A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{52FC3983-F0CD-4311-84BF-F03D0F60D777}"
 EndProject
