@@ -1,6 +1,9 @@
-﻿namespace Services.Abstractions;
+﻿using Contracts;
+
+namespace Services.Abstractions;
 
 public interface IFacturationService
 {
-    //Why default??
+    Task<IEnumerable<FactureDto>> GetAllAsync(CancellationToken cancellationToken = default);
+    Task<FactureDto> GetByIdAsync(Guid factureId, CancellationToken cancellationToken = default);
 }

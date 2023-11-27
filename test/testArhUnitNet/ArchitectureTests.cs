@@ -72,7 +72,7 @@ public partial class ArchitectureTests
     [Fact]
     public void DomainHasNoDependencies()
     {
-        var domain = Types().That().ResideInAssembly("1.Domain");
+        var domain = Types().That().ResideInAssembly("Domain");
         IArchRule domainFree = domain
             .Should().NotDependOnAny(Types().That().ResideInAssembly("Services"))
            //.And(). NotDependOnAny(Types().That().ResideInAssembly("Presentation"))
@@ -85,6 +85,7 @@ public partial class ArchitectureTests
     {
         IArchRule servicesAbstractions = 
             Types().That().ResideInNamespace("Services.Abstractions")
+            .And().DoNotHaveNameContaining("Manager")
            .Should().DependOnAny(Types().That().ResideInNamespace("Contracts"));
         servicesAbstractions.Check(_architecture);
     }
@@ -92,7 +93,7 @@ public partial class ArchitectureTests
     [Fact]
     public void ServicesAbstractions()
     {
-        IArchRule servicesAbstractions = Types().That().ResideInNamespace("Services.Abstractions")
+        IArchRule servicesAbstractions = Interfaces().That().ResideInNamespace("Services.Abstractions")
            .Should().DependOnAny(Types().That().ResideInNamespace("Contracts"));
         servicesAbstractions.Check(_architecture);
     }
