@@ -4,7 +4,8 @@ using Services.Abstractions;
 
 namespace Services;
 
-internal sealed class CommandeService : ICommandeService
+internal sealed class CommandeService 
+    : ICommandeService
 {
     private readonly IRepositoryManager _repositoryManager;
     

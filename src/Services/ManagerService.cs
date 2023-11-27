@@ -3,13 +3,13 @@ using Services.Abstractions;
 
 namespace Services;
 
-public sealed class ServiceManager
+public sealed class ManagerService
     : IServiceManager
 {
     private readonly Lazy<ICommandeService> _lazyCommandeService;
 
     private readonly ICommandeService _commandeService;
-    //private readonly IFacturationService _facturationService;
+    private readonly IFacturationService _facturationService;
     //private readonly ILoginService _loginService;
 
     public ICommandeService CommandeService
@@ -21,7 +21,7 @@ public sealed class ServiceManager
     //public ILoginService LoginService
     //    => _loginService;
 
-    public ServiceManager(IRepositoryManager repopositoryManager)
+    public ManagerService(IRepositoryManager repopositoryManager)
     {
         _commandeService = new CommandeService(repopositoryManager);
         //_facturationService = new FacturationService(repopositoryManager);

@@ -12,12 +12,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 //builder.Services.AddRazorPages();
 builder.Services.AddControllers()
-    .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
+    .AddApplicationPart(typeof(Presentation.AssemblyReferenceController).Assembly);
 
 builder.Services.AddSwaggerGen(options => 
     options.SwaggerDoc("v1", new OpenApiInfo{Title="WebApi"}));
 
-builder.Services.AddScoped<IServiceManager, ServiceManager>();
+builder.Services.AddScoped<IServiceManager, ManagerService>();
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 
 IConfiguration configuration = builder.Configuration;

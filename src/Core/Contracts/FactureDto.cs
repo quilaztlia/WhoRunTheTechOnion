@@ -1,6 +1,6 @@
 ﻿namespace Contracts;
 
-public class CommandeCreationDto
+public class FactureDto
 {
     public Guid Id { get; set; }
 }

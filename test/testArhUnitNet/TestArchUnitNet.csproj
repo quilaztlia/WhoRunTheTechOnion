@@ -19,10 +19,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Core\Contracts\Contracts.csproj" />
-    <ProjectReference Include="..\..\src\Core\Domain\1.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Core\Domain\Domain.csproj" />
     <ProjectReference Include="..\..\src\Core\Services.Abstractions\Services.Abstractions.csproj" />
     <ProjectReference Include="..\..\src\Infrastructure\Persistance\Persistance.csproj" />
     <ProjectReference Include="..\..\src\Infrastructure\Presentation\Presentation.csproj" />
+    <ProjectReference Include="..\..\src\Services\Services.csproj" />
     <ProjectReference Include="..\..\src\Web\Web.csproj" />
   </ItemGroup>
 
