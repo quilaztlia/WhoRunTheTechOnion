@@ -1,7 +1,9 @@
-### Conference: WhoRunTheTech
+### Conférence : WhoRunTheTech
 
-##Talk: ArchUnitNET aide-moi a préserver mon architecture intacte
-https://whorunthetech.com/project/archunitnet-aide-moi-a-preserver-mon-architecture-intacte/
+##Talk: ArchUnitNET aide-moi à préserver mon architecture intacte
+
+##Feedback :
+https://bit.ly/47OlmY5
  
 ##Abstract
 Lorsque l’on commence un nouveau projet, son architecture nous semble très claire :
@@ -12,11 +14,11 @@ Les classes sont bien organisées dans les bons modules.
 L’injection de dépendances est respectée.
 En bref, l’architecture est respectée.
 
-Mais le projet avance, le rythme s’accélère, des nouveaux co-équipiers arrivent et soudain notre belle architecture semble se diluer, disparaître…
+Mais le projet avance, le rythme s’accélère, des nouveaux coéquipiers arrivent et soudain notre belle architecture semble se diluer, disparaître…
 
 Comment palier/prévenir sa disparition ? Pourquoi pas en utilisant ArchUnitNET !
 
-Lors de cet talk, nous ferons un rappel rapide de l’architecture Onion et nous rédigerons quelques tests qui nous permettront de tester notre architecture, afin de la préserver tout au long de la vie du projet.
+Lors de ce talk, nous ferons un bref rappel de l’architecture Onion et nous rédigerons quelques tests qui nous permettront de tester notre architecture, afin de la préserver tout au long de la vie du projet.
 
 # Réferences
 
@@ -29,3 +31,6 @@ https://code-maze.com/onion-architecture-in-aspnetcore/
 
 ##ArchUnitNet :
 https://archunitnet.readthedocs.io/en/latest/
+
+##WhoRunTheTech :
+https://whorunthetech.com/project/archunitnet-aide-moi-a-preserver-mon-architecture-intacte/
