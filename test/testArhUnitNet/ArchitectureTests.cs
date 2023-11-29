@@ -1,16 +1,8 @@
 ﻿using ArchUnitNET.Domain;
 using ArchUnitNET.Fluent;
-using ArchUnitNET.Fluent.Slices;
 using ArchUnitNET.Loader;
 using ArchUnitNET.xUnit;
-using Contracts;
-using Domain.Entities;
-using Domain.Repository.Abstractions;
-using Presentation;
-using Services.Abstractions;
-using Services;
 using static ArchUnitNET.Fluent.ArchRuleDefinition;
-using Microsoft.AspNetCore.Identity.Data;
 
 namespace TestArchUnitNet;
 
@@ -27,19 +19,9 @@ public partial class ArchitectureTests
             System.Reflection.Assembly.Load("Web")
         ).Build();
 
-    //Nomage
+    //a Nomage
     [Fact]
-    public void NamingForServices()
-    {
-        var servicesNamingRule =
-            Classes().That().ResideInNamespace("Services")
-            .Should().HaveNameContaining("Service");
-
-        servicesNamingRule.Check(_architecture);
-    }
-
-    [Fact]
-    public void NamingForPresentation()
+    public void aNamingForPresentation()
     {
         var presentationNamingRule =
                      Classes().That().ResideInNamespace("Presentation")
@@ -47,9 +29,19 @@ public partial class ArchitectureTests
         presentationNamingRule.Check(_architecture);
     }
 
-    //Appartenance
     [Fact]
-    public void ControllersBelongsToPresentation()
+    public void aNamingForServices()
+    {
+        var servicesNamingRule =
+            Classes().That().ResideInNamespace("Services")
+            .Should().HaveNameContaining("Service");
+
+        servicesNamingRule.Check(_architecture);
+    }
+    
+    //b Appartenance
+    [Fact]
+    public void bControllersBelongsToPresentation()
     {
         IArchRule rule = Classes().That().HaveFullNameContaining("Controllers")
             .Should().ResideInNamespace("Presentation");
@@ -57,33 +49,11 @@ public partial class ArchitectureTests
         rule.Check(_architecture);
     }
 
-    //Implementations: 1 seule responsabilité => 1 implementation SRP
+    //c Dependency projects
     [Fact]
-    public void interfacesRule()
+    public void cServicesAbstractionsDependencies()
     {
-        IArchRule rule = Types().That().Are("CommandeService")
-            .Should().ImplementInterface("IFacturationService");// ICommandeService
-            //.And();
-
-        rule.Check(_architecture);
-    }
-
-    //Dependances
-    [Fact]
-    public void DomainHasNoDependencies()
-    {
-        var domain = Types().That().ResideInAssembly("Domain");
-        IArchRule domainFree = domain
-            .Should().NotDependOnAny(Types().That().ResideInAssembly("Services"))
-           //.And(). NotDependOnAny(Types().That().ResideInAssembly("Presentation"))
-           .Because("Domain is dependance free");
-        domainFree.Check(_architecture);
-    }
-
-    [Fact]
-    public void ServicesAbstractionsDependencies()
-    {
-        IArchRule servicesAbstractions = 
+        IArchRule servicesAbstractions =
             Types().That().ResideInNamespace("Services.Abstractions")
             .And().DoNotHaveNameContaining("Manager")
            .Should().DependOnAny(Types().That().ResideInNamespace("Contracts"));
@@ -91,11 +61,39 @@ public partial class ArchitectureTests
     }
 
     [Fact]
-    public void ServicesAbstractions()
+    public void cServicesDependencies()
     {
-        IArchRule servicesAbstractions = Interfaces().That().ResideInNamespace("Services.Abstractions")
-           .Should().DependOnAny(Types().That().ResideInNamespace("Contracts"));
-        servicesAbstractions.Check(_architecture);
+        IArchRule services = Types().That().ResideInNamespace("Services")
+           .Should().DependOnAny(Types().That().ResideInNamespace("Services.Abstractions"));
+              //.And().DependOnAny(Types().That().ResideInAssembly("Contracts"))
+              //.And().DependOnAny(Types().That().ResideInAssembly("Domain"));
+          // .AndShould().DependOnAny(Types().That().ResideInNamespace("Domain"));
+        services.Check(_architecture);
+    }
+
+    //Depend
+    [Fact]
+    public void DomainHasNoDependencies()
+    {
+        var domain = Types().That().ResideInAssembly("Domain");
+        IArchRule domainFree = domain
+            .Should().NotDependOnAny(Types().That().ResideInAssembly("Services"))
+            .AndShould().NotDependOnAny(Types().That().ResideInAssembly("Persistance"))
+            .AndShould().NotDependOnAny(Types().That().ResideInAssembly("Presentation"))
+            .AndShould().NotDependOnAny(Types().That().ResideInAssembly("Web"))
+           .Because("Domain is dependance free");
+        domainFree.Check(_architecture);
+    }    
+
+    //Implementations: 1 seule responsabilité => 1 implementation SRP
+    [Fact]
+    public void interfacesRule()
+    {
+        IArchRule rule = Types().That().Are("CommandeService")
+            .Should().ImplementInterface("IFacturationService");// ICommandeService
+                                                                //.And();
+
+        rule.Check(_architecture);
     }
 
     //Interfaces()
