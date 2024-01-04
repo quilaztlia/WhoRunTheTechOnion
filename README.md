@@ -1,11 +1,11 @@
 ### Conférence : WhoRunTheTech
 
-##Talk: ArchUnitNET aide-moi à préserver mon architecture intacte
-
-##Feedback :
+## Talk: ArchUnitNET aide-moi à préserver mon architecture intacte
+https://www.youtube.com/watch?v=Ldhx-upiiNg
+## Feedback :
 https://bit.ly/47OlmY5
  
-##Abstract
+## Abstract
 Lorsque l’on commence un nouveau projet, son architecture nous semble très claire :
 
 Toute l’équipe respecte les règles de nommage.
@@ -22,15 +22,15 @@ Lors de ce talk, nous ferons un bref rappel de l’architecture Onion et nous rédi
 
 # Réferences
 
-##Architecture Onion :
-https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/
-https://jeffreypalermo.com/2008/07/the-onion-architecture-part-2/
-https://jeffreypalermo.com/2008/08/the-onion-architecture-part-3/
-https://jeffreypalermo.com/2013/08/onion-architecture-part-4-after-four-years/
-https://code-maze.com/onion-architecture-in-aspnetcore/
+## Architecture Onion :
+- https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/
+- https://jeffreypalermo.com/2008/07/the-onion-architecture-part-2/
+- https://jeffreypalermo.com/2008/08/the-onion-architecture-part-3/
+- https://jeffreypalermo.com/2013/08/onion-architecture-part-4-after-four-years/
+- https://code-maze.com/onion-architecture-in-aspnetcore/
 
-##ArchUnitNet :
-https://archunitnet.readthedocs.io/en/latest/
+## ArchUnitNet :
+- https://archunitnet.readthedocs.io/en/latest/
 
-##WhoRunTheTech :
-https://whorunthetech.com/project/archunitnet-aide-moi-a-preserver-mon-architecture-intacte/
+## WhoRunTheTech :
+- https://whorunthetech.com/project/archunitnet-aide-moi-a-preserver-mon-architecture-intacte/
